@@ -317,7 +317,7 @@ class Enc_VBA_XOR:
         vba_strings = list(set(re.findall(regex_defaut_string, self.vba)))
         for strings in vba_strings:
             ciphered_string = ""
-            if exclude_mark not in strings:
+            if exclude_mark not in strings and strings != "":
 				for i in range(len(strings)):
 					ciphered_string += str((ord(strings[i]) ^ ord(self.key[self.n+i])))+","
 					if i % 20 == 0 and i != 0 and i != len(strings) - 1:

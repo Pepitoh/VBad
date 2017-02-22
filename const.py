@@ -27,7 +27,7 @@ variable_name_ex = "toto"
 regex_rand_var = '\[rdm::([0-9]+)\](\w*)' #regex that select the name of the variable, after the delimiter and the length
 regex_rand_del = '\[rdm::[0-9]+\]' #regex should select only the delimiter
 
-regex_defaut_string = '[\'\"](.+?)[\'\"]' #Regex that select all string except the one follow by exception string
+regex_defaut_string = '"((?:""|[^"])*)"' #Regex selecting all strings in double quotes (including two consecutives double quotes)
 regex_exclude_string_del = '\[!!\]' #The exclusion is to avoid vba string that could finish with exclude characters.
 exclude_mark = '[!!]'
 
